@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.2)
+
+add_library(depends STATIC ${CMAKE_CURRENT_SOURCE_DIR}/GLAD/src/glad.c)
+
+target_link_libraries(depends PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/GLFW/lib/glfw3.lib)
+
+target_include_directories(depends PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/GLFW/include)
+
+target_include_directories(depends PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/GLAD/include)
+
+target_include_directories(depends PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/glm)
